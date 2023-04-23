@@ -74,9 +74,31 @@ int print_percent(va_list types, char buffer[],
  * @buffer: Buffer for printing
  * @flags: live flags
  * @width: get width
- * @precision:
+ * @precision: the specified precision
  * @size: get size
  * Return: the number of octal printed
  */
- int print_octal(va_list type, char buffer[],
+int print_octal(va_list type, char buffer[],
 		int flags, int width, int precision, int size)
+{
+	int a = BUFF_SIZE - 2;
+	unsigned long int number = va_arg(types, unsigned long int);
+	unsigned long int init_number = number;
+
+	UNUSED(width);
+
+	num = convert_size_unsgnd(number, size);
+
+	if (number == 0)
+		buffer[i--] = '0';
+	while (number > 0)
+	{
+		buffer[i--] = (number % 8) + '0';
+		number /= 8;
+
+	}
+	if (flags & F_HASH && ini_number != 0)
+		buuffer[i--] = '0';
+	i++;
+	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+}
