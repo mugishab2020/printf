@@ -57,9 +57,9 @@ int print_octal(va_list type, char buffer[],
 int print_hexadecimal(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 int print_hexa_upper(va_list types, char buffer[],
-		int flags, int width, intprecision, int size);
+		int flags, int width, int precision, int size);
 int print_hexa(va_list types, char map_to[],
-		char buffer[], int flages, int width, int precision, int size);
+		char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 /* Functionto print non printable characters */
 int print_non_printable(va_list types, char buffer[],
