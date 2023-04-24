@@ -93,7 +93,7 @@ int write_unsgnd((int is_negative, int ind, char buffer[],
 
 /*******************UTILS*****************/
 int is_printable(char c);
-int apped_hexa_code(char, char[], int);
+int apped_hexa_code(char ascii, char buffer[], int i);
 int is_digit(char c);
 
 long int conver_size_number(long int num, int size);
