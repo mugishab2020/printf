@@ -23,7 +23,7 @@ int print_binary(va_list type, char buffer[],
 	UNUSED(precision);
 	UNUSED(size);
 
-	n = va_arg(types, unsigned int);
+	n = va_arg(type, unsigned int);
 	m = 2147483648;
 	a[0] = n / m;
 	for (i = 1; i < 32; i++)
@@ -82,23 +82,23 @@ int print_octal(va_list type, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	int a = BUFF_SIZE - 2;
-	unsigned long int number = va_arg(types, unsigned long int);
+	unsigned long int number = va_arg(type, unsigned long int);
 	unsigned long int init_number = number;
 
 	UNUSED(width);
 
-	num = convert_size_unsgnd(number, size);
+	number = conver_size_unsgnd(number, size);
 
 	if (number == 0)
-		buffer[i--] = '0';
+		buffer[a--] = '0';
 	while (number > 0)
 	{
-		buffer[i--] = (number % 8) + '0';
+		buffer[a--] = (number % 8) + '0';
 		number /= 8;
 
 	}
-	if (flags & F_HASH && ini_number != 0)
-		buuffer[i--] = '0';
-	i++;
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	if (flags & F_HASH && init_number != 0)
+		buffer[a--] = '0';
+	a++;
+	return (write_unsgnd(0, a, buffer, flags, width, precision, size));
 }

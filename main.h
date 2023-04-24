@@ -47,7 +47,7 @@ int print_percent(va_list types, char buffer[],
 
 /* Function to print numbers */
 int print_int(va_list types, char buffer[],
-		int flags, int width int precision, int size);
+		int flags, int width, int precision, int size);
 int print_binary(va_list type, char buffer[],
 		int flags, int width, int precision, int size);
 int print_unsigned(va_list type, char buffer[],
@@ -86,9 +86,9 @@ int write_number(int is_positive, int ind, char buffer[],
 		int flags, int width, int precision, int size);
 int write_num(int ind, char buffer[], int flags,
 		int width, int precision, int length, char padd, char extra_c);
-int write_pointer(char buffer[], int ind int length,
+int write_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd, char extra_c, int padd_start);
-int write_unsgnd((int is_negative, int ind, char buffer[],
+int write_unsgnd(int is_negative, int ind, char buffer[],
 			int flags, int width, int precision, int size);
 
 /*******************UTILS*****************/
