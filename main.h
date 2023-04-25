@@ -7,8 +7,6 @@
 
 #define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
-
-/* FLAGS */
 #define F_MINUS 1
 #define F_PLUS 2
 #define F_ZERO 4
@@ -67,7 +65,6 @@ int print_non_printable(va_list types, char buffer[],
 /* Function to print memory address */
 int print_pointer(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
-
 /* Function to handle other specifiers*/
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
