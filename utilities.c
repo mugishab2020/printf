@@ -43,3 +43,17 @@ int apped_hexa_code(char ascii, char buffer[], int i)
 	buffer[i] = map_to[ascii % 16];
 	return (3);
 }
+/**
+ * _strlen - function to find length of the string
+ *
+ * @str: the input string
+ * Return: the size of the string
+ */
+int _strlen(const char *str)
+{
+	int a;
+
+	for (a = 0; str[a]; a++)
+		_putchar(str[a]);
+	return (a);
+}

@@ -22,49 +22,44 @@
  * @fmt: The format
  * @fn: The function associated
  */
-struct fmt
+typedef struct fmt
 {
 	char fmt;
-	int (*fn)(va_list, char[], int, int, int);
-};
+	int (*fn)(va_list);
+} format;
 
-typedef struct fmt fmt_t;
+/**typedef struct fmt fmt_t;*/
 
+int _strlen(const char *);
+int _putchar(char);
+int buffer(char);
+int handler(const char *, va_list);
+int  percentage_handler(const char *, va_list, int *);
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 		int flags, int width, int precision, int size);
 
 /* Function to print chars and strings */
-int print_char(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
-int print_string(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
+int print_char(va_list);
+int print_string(va_list);
 int print_percent(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /* Function to print numbers */
-int print_int(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
-int print_binary(va_list type, char buffer[],
-		int flags, int width, int precision, int size);
-int print_unsigned(va_list type, char buffer[],
-		int flags, int width, int precision, int size);
-int print_octal(va_list type, char buffer[],
-		int flags, int width, int precision, int size);
-int print_hexadecimal(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
-int print_hexa_upper(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
-int print_hexa(va_list types, char map_to[],
-		char buffer[], int flags, char flag_ch, int width, int precision, int size);
+int print_integer(va_list);
+int print_binary(va_list);
+int print_unsigned(va_list);
+int print_octal(va_list);
+int print_hexadecimal_low(va_list);
+int print_hexadecimal_upp(va_list);
+int print_rot(va_list);
 
 /* Functionto print non printable characters */
 int print_non_printable(va_list types, char buffer[],
-		int flags, int width, int precision, int size),
+		int flags, int width, int precision, int size);
 
 /* Function to print memory address */
-int print_pointer(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
+int print_pointer(va_list);
 /* Function to handle other specifiers*/
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);
@@ -72,10 +67,10 @@ int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
 
 /*Function to print string in reverse*/
-int print_reverse(va_list types, char buffer[],
-		int flags, int width, int precision, int size);
+int print_rev_string(va_list);
 
 /* width handler */
+int handler(const char *str, va_list list);
 int handle_write_char(char c, char buffer[],
 		int flags, int width, int precision, int size);
 int write_number(int is_positive, int ind, char buffer[],
