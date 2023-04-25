@@ -13,7 +13,7 @@
 int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
-	char = va_arg(types, char *);
+	char *str = va_arg(types, char *);
 	int count = 0;
 
 	if (str == NULL)
@@ -29,7 +29,7 @@ int print_non_printable(va_list types, char buffer[],
 			count++;
 		} else
 		{
-			count += append_hexa_code(str[i], buffer, count);
+			count += apped_hexa_code(str[i], buffer, count);
 		}
 	}
 	return (write(1, buffer, count));
@@ -65,12 +65,12 @@ int print_pointer(va_list types, char buffer[],
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
-	num_addrs = (unsigned long)addrs;
+	numaddrs = (unsigned long)addrs;
 
-	while (num_addrs > 0)
+	while (numaddrs > 0)
 	{
-		buffer[ind--] = map_to[num_addrs % 16];
-		num_addrs / 16;
+		buffer[ind--] = map_to[numaddrs % 16];
+		numaddrs /16;
 		length++;
 	}
 
@@ -84,5 +84,5 @@ int print_pointer(va_list types, char buffer[],
 	ind++;
 
 	return (write_pointer(buffer, ind, length,
-				width, flags, padd, extra_c, padd_start));
+				width, flags, padd, extra_c, padd_str));
 }

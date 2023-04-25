@@ -88,7 +88,7 @@ int print_int(va_list types, char buffer[],
 
 	unsigned long int num;
 
-	n = convert_size_number(n, size);
+	n = conver_size_number(n, size);
 
 	if (n == 0)
 		buffer[i--] = '0';
