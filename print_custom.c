@@ -15,11 +15,11 @@ int print_bigS(va_list l, flags_t *f)
 	if (!s)
 		return (_putchar("(null)"));
 
-	for (i = 0; s[i], i++)
+	for (i = 0; s[i]; i++)
 	{
 		if (s[i] > 0 && (s[i] < 32 || s[i] >= 127))
 		{
-			_putchar("\\x");
+			_puts("\\x");
 			count += 2;
 			res = convert(s[i], 16, 0);
 			if (!res[1])
