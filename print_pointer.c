@@ -20,7 +20,7 @@ int print_pointer(va_list list)
 
 	size = print("0x");
 
-	if (!_strcmp(b_buff, "-1"))
+	if (!_strcmp(p_buff, "-1"))
 		size += print("ffffffffffffffff");
 	else
 		size += print(p_buff);
@@ -34,7 +34,7 @@ int print_pointer(va_list list)
  * @s2: string 2
  * Return: integer
  **/
-int _strcmp(cahr *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i;
 

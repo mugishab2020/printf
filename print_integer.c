@@ -13,7 +13,7 @@ int print_integer(va_list list)
 
 	p_buff = itoa(va_arg(list, int), 10);
 
-	size = print((p_buff != NULL) ? p_buffe : "NULL");
+	size = print((p_buff != NULL) ? p_buff : "NULL");
 
 	return (size);
 }

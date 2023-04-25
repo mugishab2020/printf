@@ -4,7 +4,12 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
-
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
 typedef struct fmt
 {
 	char fmt;
@@ -39,4 +44,9 @@ int get_flag(char s, flags_t *f);
 int print_pointer(va_list);
 int print_rev_string(va_list);
 int handler(const char *str, va_list list);
+
+int print(char *);
+char *itoa(long int, int);
+
+
 #endif /* MAIN_H */

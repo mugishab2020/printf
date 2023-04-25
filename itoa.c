@@ -28,6 +28,6 @@ char *itoa(long int num, int base)
 		n /= base;
 	} while (n != 0);
 	if (signe)
-		*--ptr = sign;
+		*--ptr = signe;
 	return (ptr);
 }
