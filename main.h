@@ -16,7 +16,7 @@ typedef struct fmt
 	int (*fn)(va_list);
 } format;
 
-/**typedef struct fmt fmt_t;*/
+/**typedef struct fmt for my parretj fmt_t;*/
 
 int _strlen(const char *);
 int _puts(char *str);
