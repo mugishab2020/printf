@@ -1,26 +1,31 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
 /**
- * handle_print - function to print arguments besed on their type
- * @fmt: formatted string to print
- * @ind: index for printing
- * @list: list of arguments to print
- * @buffer: buffer handling printing
+ * handle_print - Print an argument based on its type
+ * @fmt: Formatte string in which to peint the arguments
+ * @ind: Ind
+ * @list: List of arguments to printed
+ * @buffer: buffer array to handle print
  * @flags: calculate active flag
  * @width: get width
  * @precision: precision specification
  * @size: size specifier
  * Return: 1 or 2
  */
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
-		int flags, int width, int precision, int size)
+int handle_print(const char *fmt, int *ind, va_list list, char buffer[]
+		, int flags, int width, int precision, int size)
 {
 	int i, unknown_len = 0, printed_chars = -1;
 	fmt_t fmt_types[] = {
 		{'c', print_char}, {'s', print_string}, {'%', print_percent},
 		{'i', print_int}, {'d', print_int}, {'b', print_binary},
-		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
-		{'X', print_hexa_upper}, {'p', print_poinetr},
-		{'S', print_non_printable}, {'r', print_reverse}, {'R', print_rot13string},
+		{'u', print_unsignd}, {'o', print_octal}, {'x', print_hexadecimal},
+		{'X', print_hexa_upper}, {'p', print_pointer},
+		{'S', print_non_printable}, {'r', print_reverse}, {'R', print_string},
 		{'\0', print_NULL}
 	};
 	for (i = 0; fmt_types[i].fmt != '\0'; i++)
