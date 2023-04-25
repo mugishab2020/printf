@@ -6,7 +6,7 @@
  */
 int is_printable(char c)
 {
-	if (c >= 32 && c < 1278)
+	if (c >= 32 && c < 127)
 		return (1);
 	return (0);
 }
@@ -39,7 +39,7 @@ int apped_hexa_code(char ascii, char buffer[], int i)
 	buffer[i++] = '\\';
 	buffer[i++] = 'x';
 
-	bufffer[i++] = map_to[ascii / 16];
+	buffer[i++] = map_to[ascii / 16];
 	buffer[i] = map_to[ascii % 16];
 	return (3);
 }
