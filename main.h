@@ -29,7 +29,12 @@ int print_octal(va_list);
 int print_hexadecimal_low(va_list);
 int print_hexadecimal_upp(va_list);
 int print_rot(va_list);
-
+/*custom function*/
+int print_rot13(va_list l, flags_t *f);
+int print_rev(va_list l, flags_t *f);
+int print_bigS(va_list l, flags_t *f);
+/* get flag function*/
+int get_flag(char s, flags_t *f);
 /* Functionto print non printable character */
 int print_pointer(va_list);
 int print_rev_string(va_list);
