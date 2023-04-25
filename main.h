@@ -59,7 +59,17 @@ int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision, int size);
 
 /* Function to print memory address */
+<<<<<<< HEAD
 int print_pointer(va_list);
+=======
+<<<<<<< HEAD
+int print_pointer(va_list types, char buffer[], int flags, int width, int precision, int size);
+
+=======
+int print_pointer(va_list types, char buffer[],
+		int flags, int width, int precision, int size);
+>>>>>>> ebc8fb7d38aac02e0af41ab47ebea9b61ae4f178
+>>>>>>> 33bf268da88221f3e038ac0464ab1436bec6f9f1
 /* Function to handle other specifiers*/
 int get_flags(const char *format, int *i);
 int get_width(const char *format, int *i, va_list list);

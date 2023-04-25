@@ -1,4 +1,8 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
 /**
  * print_non_printable - Prints ascii codes in hexa of non printable chars
@@ -11,8 +15,9 @@
  * Return: Number of chars printed
  */
 int print_non_printable(va_list types, char buffer[],
-		int flags, int width, int precision, int size)
+		 int width, int precision, int size)
 {
+	int i;
 	char *str = va_arg(types, char *);
 	int count = 0;
 
@@ -21,7 +26,7 @@ int print_non_printable(va_list types, char buffer[],
 		return (write(1, "(null)", 6));
 	}
 
-	for (int i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		if (is_printable(str[i]))
 		{
