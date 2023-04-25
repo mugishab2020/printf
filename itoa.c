@@ -27,6 +27,7 @@ char *itoa(long int num, int base)
 		*--ptr = array[n % base];
 		n /= base;
 	} while (n != 0);
+	
 	if (signe)
 		*--ptr = signe;
 	return (ptr);

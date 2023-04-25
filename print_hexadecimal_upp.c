@@ -1,4 +1,6 @@
 #include "main.h"
+int is_lowercase(char);
+char *string_to_upper(char *);
 /**
  * print_hexadecimal_upp - function to print uppercase hexadecimal
  * @list: the list of args
@@ -39,7 +41,6 @@ char *string_to_upper(char *s)
 	{
 		if (is_lowercase(s[i]))
 			s[i] = s[i] - 32;
-
-		return (s);
 	}
+	return (s);
 }

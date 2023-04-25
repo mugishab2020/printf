@@ -19,7 +19,8 @@ typedef struct fmt
 /**typedef struct fmt fmt_t;*/
 
 int _strlen(const char *);
-int _putchar(char);
+int _puts(char *str);
+int _putchar(char c);
 int buffer(char);
 int handler(const char *, va_list);
 int  percentage_handler(const char *, va_list, int *);
@@ -43,7 +44,9 @@ int get_flag(char s, flags_t *f);
 /* Functionto print non printable character */
 int print_pointer(va_list);
 int print_rev_string(va_list);
-int handler(const char *str, va_list list);
+
+
+char *convert(unsigned long int num, int base, int lowercase);
 
 int print(char *);
 char *itoa(long int, int);
