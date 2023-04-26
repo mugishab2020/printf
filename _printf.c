@@ -1,4 +1,12 @@
 #include "main.h"
+
+/**
+ * _print - print function to hundle printing
+ * @format: printing format of any word
+ *
+ * Return: size
+ */
+
 int _printf(const char *format, ...)
 {
 	int size;
