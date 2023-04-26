@@ -1,6 +1,5 @@
 #include "main.h"
 
-void print_buffer(char buffer[], int *buff_ind);
 /**
  * _print - produce output according to a given format
  * @format: a character string composed of zero or mordirectives

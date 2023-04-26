@@ -24,7 +24,7 @@ int handler(const char *str, va_list list)
 			continue;
 		}
 		_putchar(str[i]);
-		 size = size + 1
+		 size = size + 1;
 	}
 	return (size);
 }
