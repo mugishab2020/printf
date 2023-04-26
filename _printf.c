@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _print - print function to hundle printing
- * @format: printing format of any word
+ * _print - produce output according to a given format
+ * @format: a character string composed of zero or mordirectives
  *
- * Return: size
+ * Return: the number of characters printed
  */
 
 int _printf(const char *format, ...)
