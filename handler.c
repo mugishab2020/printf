@@ -72,7 +72,7 @@ int  percentage_handler(const char *str, va_list list, int *i)
 			return (size);
 		}
 	}
-	_putchar('%'), _putchar(str[*i]);
+	_putchar('%'), _putchar(str[*i];
 	return (2);
 	}
 
