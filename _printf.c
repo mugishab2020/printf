@@ -1,14 +1,15 @@
 #include "main.h"
 
+void print_buffer(char buffer[], int *buff_ind);
 /**
  * _print - produce output according to a given format
  * @format: a character string composed of zero or mordirectives
  *
  * Return: the number of characters printed
  */
-
 int _printf(const char *format, ...)
-{
+}
+
 	int size;
 	va_list list;
 
