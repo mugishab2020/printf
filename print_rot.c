@@ -23,7 +23,7 @@ int rot13(char *s)
 			}
 		}
 
-		if (normal[j])
+		if (!normal[j])
 			_putchar(s[i]);
 	}
 	return (i);
@@ -32,7 +32,7 @@ int rot13(char *s)
 /**
  * print_rot - Print the rot13'ed string
  * @list: String to encoded
- *
+ *i
  * Return: length of the string encoded
  */
 int print_rot(va_list list)

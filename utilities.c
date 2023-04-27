@@ -9,8 +9,8 @@ int _strlen(const char *str)
 {
 	int a;
 
-	for (a = 0; str[a]; a++)
-		_putchar(str[a]);
+	for (a = 0; str[a] != 0; a++)
+		;
 	return (a);
 }
 /**
@@ -22,7 +22,7 @@ int print(char *str)
 {
 	int i;
 
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 
 	return (i);
